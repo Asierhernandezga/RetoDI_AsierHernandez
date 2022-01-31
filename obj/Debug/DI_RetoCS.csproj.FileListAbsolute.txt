@@ -1,0 +1,25 @@
+G:\ELORRIETA 2021-2022\Desarrollo de interfaces - Jorge\Cap09_Formularios\DI_RetoCS\bin\Debug\DI_RetoCS.exe.config
+G:\ELORRIETA 2021-2022\Desarrollo de interfaces - Jorge\Cap09_Formularios\DI_RetoCS\bin\Debug\DI_RetoCS.exe
+G:\ELORRIETA 2021-2022\Desarrollo de interfaces - Jorge\Cap09_Formularios\DI_RetoCS\bin\Debug\DI_RetoCS.pdb
+G:\ELORRIETA 2021-2022\Desarrollo de interfaces - Jorge\Cap09_Formularios\DI_RetoCS\obj\Debug\DI_RetoCS.csprojAssemblyReference.cache
+G:\ELORRIETA 2021-2022\Desarrollo de interfaces - Jorge\Cap09_Formularios\DI_RetoCS\obj\Debug\DI_RetoCS.Properties.Resources.resources
+G:\ELORRIETA 2021-2022\Desarrollo de interfaces - Jorge\Cap09_Formularios\DI_RetoCS\obj\Debug\DI_RetoCS.csproj.GenerateResource.cache
+G:\ELORRIETA 2021-2022\Desarrollo de interfaces - Jorge\Cap09_Formularios\DI_RetoCS\obj\Debug\DI_RetoCS.csproj.CoreCompileInputs.cache
+G:\ELORRIETA 2021-2022\Desarrollo de interfaces - Jorge\Cap09_Formularios\DI_RetoCS\obj\Debug\DI_RetoCS.exe
+G:\ELORRIETA 2021-2022\Desarrollo de interfaces - Jorge\Cap09_Formularios\DI_RetoCS\obj\Debug\DI_RetoCS.pdb
+G:\ELORRIETA 2021-2022\Desarrollo de interfaces - Jorge\Cap09_Formularios\DI_RetoCS\obj\Debug\DI_RetoCS.Padre.resources
+G:\ELORRIETA 2021-2022\Desarrollo de interfaces - Jorge\Cap09_Formularios\DI_RetoCS\obj\Debug\DI_RetoCS.Form2.resources
+G:\ELORRIETA 2021-2022\Desarrollo de interfaces - Jorge\Cap09_Formularios\DI_RetoCS\obj\Debug\DI_RetoCS.Form3.resources
+C:\Users\Admin\Desktop\RetoDI\RetoDI_AsierHernandez\bin\Debug\DI_RetoCS.exe.config
+C:\Users\Admin\Desktop\RetoDI\RetoDI_AsierHernandez\bin\Debug\DI_RetoCS.exe
+C:\Users\Admin\Desktop\RetoDI\RetoDI_AsierHernandez\bin\Debug\DI_RetoCS.pdb
+C:\Users\Admin\Desktop\RetoDI\RetoDI_AsierHernandez\obj\Debug\DI_RetoCS.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\RetoDI\RetoDI_AsierHernandez\obj\Debug\DI_RetoCS.Form1.resources
+C:\Users\Admin\Desktop\RetoDI\RetoDI_AsierHernandez\obj\Debug\DI_RetoCS.Form2.resources
+C:\Users\Admin\Desktop\RetoDI\RetoDI_AsierHernandez\obj\Debug\DI_RetoCS.Form3.resources
+C:\Users\Admin\Desktop\RetoDI\RetoDI_AsierHernandez\obj\Debug\DI_RetoCS.Padre.resources
+C:\Users\Admin\Desktop\RetoDI\RetoDI_AsierHernandez\obj\Debug\DI_RetoCS.Properties.Resources.resources
+C:\Users\Admin\Desktop\RetoDI\RetoDI_AsierHernandez\obj\Debug\DI_RetoCS.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\RetoDI\RetoDI_AsierHernandez\obj\Debug\DI_RetoCS.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\RetoDI\RetoDI_AsierHernandez\obj\Debug\DI_RetoCS.exe
+C:\Users\Admin\Desktop\RetoDI\RetoDI_AsierHernandez\obj\Debug\DI_RetoCS.pdb
