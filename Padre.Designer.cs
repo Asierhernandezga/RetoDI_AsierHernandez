@@ -31,9 +31,9 @@ namespace DI_RetoCS
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.formulariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.miLista = new System.Windows.Forms.ToolStripMenuItem();
             this.form2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.form1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.miLista = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,7 +44,7 @@ namespace DI_RetoCS
             this.miLista});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(807, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -57,17 +57,11 @@ namespace DI_RetoCS
             this.formulariosToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
             this.formulariosToolStripMenuItem.Text = "Formularios";
             // 
-            // miLista
-            // 
-            this.miLista.Name = "miLista";
-            this.miLista.Size = new System.Drawing.Size(94, 20);
-            this.miLista.Text = "Form Abiertos";
-            // 
             // form2ToolStripMenuItem
             // 
             this.form2ToolStripMenuItem.Name = "form2ToolStripMenuItem";
             this.form2ToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F2;
-            this.form2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.form2ToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.form2ToolStripMenuItem.Text = "Form2";
             this.form2ToolStripMenuItem.Click += new System.EventHandler(this.form2ToolStripMenuItem_Click);
             // 
@@ -75,15 +69,21 @@ namespace DI_RetoCS
             // 
             this.form1ToolStripMenuItem.Name = "form1ToolStripMenuItem";
             this.form1ToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F3;
-            this.form1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.form1ToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.form1ToolStripMenuItem.Text = "Form3";
             this.form1ToolStripMenuItem.Click += new System.EventHandler(this.form1ToolStripMenuItem_Click);
+            // 
+            // miLista
+            // 
+            this.miLista.Name = "miLista";
+            this.miLista.Size = new System.Drawing.Size(94, 20);
+            this.miLista.Text = "Form Abiertos";
             // 
             // Padre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(807, 484);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Padre";
