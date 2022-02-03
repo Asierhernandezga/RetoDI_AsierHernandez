@@ -26,6 +26,9 @@ namespace DI_RetoCS
         private void Form1_Load(object sender, EventArgs e)
         {
             comboBoxPais.SelectedIndex = 0;
+            comboBoxFechaComparar.SelectedIndex = 0;
+            comboBoxFechaComparar1.SelectedIndex = 0;
+            comboBoxGenero.SelectedIndex = 0;
         }
 
         private void buttonContarSinParametros_Click(object sender, EventArgs e)
@@ -200,11 +203,9 @@ namespace DI_RetoCS
         {
             //LEER
 
-
-
             string ComboText = comboBoxGenero.Text;   //Para coger el texto del ComboBox
 
-            sql = "Select Titulo from Peliculas where CodGenero ='" + ComboText + "'";
+            sql = "Select Titulo from Peliculas where CodGenero =" + ComboText;
 
             SqlCommand cmd = new SqlCommand(sql, Conexion.pConexion);
             try
@@ -212,22 +213,17 @@ namespace DI_RetoCS
                 Conexion.AbrirConexion();
                 SqlDataReader dr = null; //NO tiene NEW
                 dr = cmd.ExecuteReader();
-                listView1.Clear();
-                listView1.GridLines = true;
-                listView1.View = View.Details;
+                listViewPeliculas.Clear();
+                listViewPeliculas.GridLines = true;
+                listViewPeliculas.View = View.Details;
                 //añadimnos las columnas al listview1
-                listView1.Columns.Add("Nombre", 120, HorizontalAlignment.Right);
-                listView1.Columns.Add(dr.GetName(1), 160, HorizontalAlignment.Right);
-                listView1.Columns.Add(dr.GetName(2), 120, HorizontalAlignment.Right);
-                listView1.Columns.Add(dr.GetName(3), 120, HorizontalAlignment.Right);
+                listViewPeliculas.Columns.Add(dr.GetName(0), 160, HorizontalAlignment.Right);
 
                 while (dr.Read())
                 {
                     ListViewItem fila = new ListViewItem(dr.GetString(0));
-                    fila.SubItems.Add(dr.GetString(1));
-                    fila.SubItems.Add(dr.GetString(2));
-                    fila.SubItems.Add(dr.GetString(3));
-                    listView1.Items.Add(fila);
+                    //fila.SubItems.Add(dr.GetString(0));
+                    listViewPeliculas.Items.Add(fila);
                 }
 
                 Conexion.CerrarConexion();
@@ -237,6 +233,124 @@ namespace DI_RetoCS
             {
                 MessageBox.Show("Error: " + ex.ToString());
 
+            }
+        }
+
+        private void buttonListView1_Click(object sender, EventArgs e)
+        {
+
+            sql = "Select * from Facturas where Fecha >='" + comboBoxFechaComparar.Text + "'and Fecha <='"+ comboBoxFechaComparar1.Text + "'";
+
+            SqlCommand cmd = new SqlCommand(sql, Conexion.pConexion);
+            try
+            {
+                Conexion.AbrirConexion();
+                SqlDataReader dr = null; //NO tiene NEW
+                dr = cmd.ExecuteReader();
+                listViewFacturas.Clear();
+                listViewFacturas.GridLines = true;
+                listViewFacturas.View = View.Details;
+                //añadimnos las columnas al listview1
+                listViewFacturas.Columns.Add(dr.GetName(0), 160, HorizontalAlignment.Right);
+                listViewFacturas.Columns.Add(dr.GetName(1), 160, HorizontalAlignment.Right);
+                listViewFacturas.Columns.Add(dr.GetName(2), 160, HorizontalAlignment.Right);
+                listViewFacturas.Columns.Add(dr.GetName(3), 160, HorizontalAlignment.Right);
+                listViewFacturas.Columns.Add(dr.GetName(4), 160, HorizontalAlignment.Right);
+                listViewFacturas.Columns.Add(dr.GetName(5), 160, HorizontalAlignment.Right);
+                listViewFacturas.Columns.Add(dr.GetName(6), 160, HorizontalAlignment.Right);
+                listViewFacturas.Columns.Add(dr.GetName(7), 160, HorizontalAlignment.Right);
+                listViewFacturas.Columns.Add(dr.GetName(8), 160, HorizontalAlignment.Right);
+
+                while (dr.Read())
+                {
+                    ListViewItem fila = new ListViewItem(Convert.ToString(dr.GetValue(0)));
+                    //fila.SubItems.Add(Convert.ToString(dr.GetDateTime(1).ToShortDateString()));
+                    fila.SubItems.Add(Convert.ToString(dr.GetValue(1)));
+                    fila.SubItems.Add(Convert.ToString(dr.GetValue(2)));
+                    fila.SubItems.Add(Convert.ToString(dr.GetValue(3)));
+                    fila.SubItems.Add(Convert.ToString(dr.GetValue(4)));
+                    fila.SubItems.Add(Convert.ToString(dr.GetValue(5)));
+                    fila.SubItems.Add(Convert.ToString(dr.GetValue(6)));
+                    fila.SubItems.Add(Convert.ToString(dr.GetValue(7)));
+                    fila.SubItems.Add(Convert.ToString(dr.GetValue(8)));
+                    listViewFacturas.Items.Add(fila);
+                }
+
+                Conexion.CerrarConexion();
+                dr.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.ToString());
+
+            }
+        }
+
+        private void buttonMetadatosFactura_Click(object sender, EventArgs e)
+        {
+            //METADATOS
+            sql = "Select * from Facturas";
+            SqlCommand cmd = new SqlCommand(sql, Conexion.pConexion);
+            string acum = null;
+            SqlDataReader dr;
+            cont = 0;
+            try
+            {
+                Conexion.AbrirConexion();
+                dr = cmd.ExecuteReader();
+                for (int x = 0; x <= dr.FieldCount - 1; x++)
+                {
+                    acum += dr.GetName(x) + " - " + dr.GetFieldType(x) + Environment.NewLine;
+                }
+                acum += new string('-', 30);  // en c# no existe strdup
+                MessageBox.Show(acum);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                Conexion.CerrarConexion();
+            }
+        }
+
+        private void buttonMsgBox25Clientes_Click(object sender, EventArgs e)
+        {
+            string acum = null;
+            sql = "Select * from Clientes";
+            SqlCommand cmd = new SqlCommand(sql, Conexion.pConexion);
+            SqlDataReader dr;
+            cont = 0;
+            try
+            {
+                Conexion.AbrirConexion();
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    cont += 1;
+                    //acum += cont + "- " + dr.GetValue(0) + "- " + dr.GetString(1) + "- " + dr.GetString(2) + "- " + dr.GetValue(3) + "- " + dr.GetValue(4) + Environment.NewLine;
+                    acum += cont + "- " + dr.GetValue(0) + "- " + dr.GetString(1) + "- " + Environment.NewLine;
+                    if ((cont % 25) == 0)
+                    {
+                        MessageBox.Show(acum);
+                        acum = null;
+                    }
+                }
+                if (acum != null)
+                {
+                    MessageBox.Show(acum);
+                }
+                dr.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                Conexion.CerrarConexion();
             }
         }
     }

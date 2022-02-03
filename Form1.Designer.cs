@@ -62,9 +62,18 @@ namespace DI_RetoCS
             this.textBoxResultadoDelete = new System.Windows.Forms.TextBox();
             this.buttonListView = new System.Windows.Forms.Button();
             this.lblListview = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listViewPeliculas = new System.Windows.Forms.ListView();
             this.comboBoxGenero = new System.Windows.Forms.ComboBox();
-            this.labelGenero = new System.Windows.Forms.Label();
+            this.lblGenero = new System.Windows.Forms.Label();
+            this.lblListview1 = new System.Windows.Forms.Label();
+            this.lblFechaComparar = new System.Windows.Forms.Label();
+            this.buttonListView1 = new System.Windows.Forms.Button();
+            this.comboBoxFechaComparar = new System.Windows.Forms.ComboBox();
+            this.lblFechaComparar1 = new System.Windows.Forms.Label();
+            this.comboBoxFechaComparar1 = new System.Windows.Forms.ComboBox();
+            this.listViewFacturas = new System.Windows.Forms.ListView();
+            this.buttonMetadatosFactura = new System.Windows.Forms.Button();
+            this.buttonMsgBox25Clientes = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblConectado
@@ -378,11 +387,11 @@ namespace DI_RetoCS
             // 
             // buttonListView
             // 
-            this.buttonListView.Location = new System.Drawing.Point(433, 108);
+            this.buttonListView.Location = new System.Drawing.Point(433, 39);
             this.buttonListView.Name = "buttonListView";
             this.buttonListView.Size = new System.Drawing.Size(97, 23);
             this.buttonListView.TabIndex = 31;
-            this.buttonListView.Text = "Sin Parametros";
+            this.buttonListView.Text = "Ver Lista";
             this.buttonListView.UseVisualStyleBackColor = true;
             this.buttonListView.Click += new System.EventHandler(this.buttonListView_Click);
             // 
@@ -390,62 +399,722 @@ namespace DI_RetoCS
             // 
             this.lblListview.AutoSize = true;
             this.lblListview.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListview.Location = new System.Drawing.Point(430, 81);
+            this.lblListview.Location = new System.Drawing.Point(430, 13);
             this.lblListview.Name = "lblListview";
-            this.lblListview.Size = new System.Drawing.Size(63, 16);
+            this.lblListview.Size = new System.Drawing.Size(144, 16);
             this.lblListview.TabIndex = 32;
-            this.lblListview.Text = "Listview";
+            this.lblListview.Text = "Listview Peliculas-7";
             // 
-            // listView1
+            // listViewPeliculas
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(433, 147);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(355, 186);
-            this.listView1.TabIndex = 33;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listViewPeliculas.HideSelection = false;
+            this.listViewPeliculas.Location = new System.Drawing.Point(433, 68);
+            this.listViewPeliculas.Name = "listViewPeliculas";
+            this.listViewPeliculas.Size = new System.Drawing.Size(355, 186);
+            this.listViewPeliculas.TabIndex = 33;
+            this.listViewPeliculas.UseCompatibleStateImageBehavior = false;
             // 
             // comboBoxGenero
             // 
             this.comboBoxGenero.FormattingEnabled = true;
             this.comboBoxGenero.Items.AddRange(new object[] {
-            "Acción",
-            "Aventuras",
-            "Bélica",
-            "Ciencia-Ficción",
-            "Comedia",
-            "Drama",
-            "Erótica",
-            "Histórica",
-            "Infantil",
-            "Musical",
-            "Oeste",
-            "Suspense",
-            "Terror",
-            "Thriller"});
-            this.comboBoxGenero.Location = new System.Drawing.Point(553, 108);
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14"});
+            this.comboBoxGenero.Location = new System.Drawing.Point(551, 41);
             this.comboBoxGenero.Name = "comboBoxGenero";
             this.comboBoxGenero.Size = new System.Drawing.Size(121, 21);
             this.comboBoxGenero.TabIndex = 34;
             // 
-            // labelGenero
+            // lblGenero
             // 
-            this.labelGenero.AutoSize = true;
-            this.labelGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGenero.Location = new System.Drawing.Point(586, 81);
-            this.labelGenero.Name = "labelGenero";
-            this.labelGenero.Size = new System.Drawing.Size(53, 16);
-            this.labelGenero.TabIndex = 35;
-            this.labelGenero.Text = "Genero";
+            this.lblGenero.AutoSize = true;
+            this.lblGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGenero.Location = new System.Drawing.Point(585, 13);
+            this.lblGenero.Name = "lblGenero";
+            this.lblGenero.Size = new System.Drawing.Size(53, 16);
+            this.lblGenero.TabIndex = 35;
+            this.lblGenero.Text = "Genero";
+            // 
+            // lblListview1
+            // 
+            this.lblListview1.AutoSize = true;
+            this.lblListview1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblListview1.Location = new System.Drawing.Point(430, 268);
+            this.lblListview1.Name = "lblListview1";
+            this.lblListview1.Size = new System.Drawing.Size(136, 16);
+            this.lblListview1.TabIndex = 36;
+            this.lblListview1.Text = "ListviewFacturas-8";
+            // 
+            // lblFechaComparar
+            // 
+            this.lblFechaComparar.AutoSize = true;
+            this.lblFechaComparar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaComparar.Location = new System.Drawing.Point(585, 268);
+            this.lblFechaComparar.Name = "lblFechaComparar";
+            this.lblFechaComparar.Size = new System.Drawing.Size(46, 16);
+            this.lblFechaComparar.TabIndex = 37;
+            this.lblFechaComparar.Text = "Fecha";
+            // 
+            // buttonListView1
+            // 
+            this.buttonListView1.Location = new System.Drawing.Point(433, 296);
+            this.buttonListView1.Name = "buttonListView1";
+            this.buttonListView1.Size = new System.Drawing.Size(97, 23);
+            this.buttonListView1.TabIndex = 38;
+            this.buttonListView1.Text = "Ver Lista";
+            this.buttonListView1.UseVisualStyleBackColor = true;
+            this.buttonListView1.Click += new System.EventHandler(this.buttonListView1_Click);
+            // 
+            // comboBoxFechaComparar
+            // 
+            this.comboBoxFechaComparar.FormattingEnabled = true;
+            this.comboBoxFechaComparar.Items.AddRange(new object[] {
+            "2004-10-10 00:00:00.000",
+            "2004-11-15 00:00:00.000",
+            "2004-12-12 00:00:00.000",
+            "2005-01-22 00:00:00.000",
+            "2005-01-25 00:00:00.000",
+            "2005-01-26 00:00:00.000",
+            "2005-01-27 00:00:00.000",
+            "2005-01-29 00:00:00.000",
+            "2005-02-01 00:00:00.000",
+            "2005-02-22 00:00:00.000",
+            "2005-02-24 00:00:00.000",
+            "2005-02-25 00:00:00.000",
+            "2005-03-02 00:00:00.000",
+            "2005-03-10 00:00:00.000",
+            "2005-03-19 00:00:00.000",
+            "2005-03-24 00:00:00.000",
+            "2005-03-26 00:00:00.000",
+            "2005-04-05 00:00:00.000",
+            "2005-04-08 00:00:00.000",
+            "2005-04-13 00:00:00.000",
+            "2005-04-16 00:00:00.000",
+            "2005-04-26 00:00:00.000",
+            "2005-04-27 00:00:00.000",
+            "2005-04-28 00:00:00.000",
+            "2005-05-01 00:00:00.000",
+            "2005-05-02 00:00:00.000",
+            "2005-05-06 00:00:00.000",
+            "2005-05-08 00:00:00.000",
+            "2005-05-14 00:00:00.000",
+            "2005-05-18 00:00:00.000",
+            "2005-05-22 00:00:00.000",
+            "2005-06-02 00:00:00.000",
+            "2005-06-10 00:00:00.000",
+            "2005-06-11 00:00:00.000",
+            "2005-06-13 00:00:00.000",
+            "2005-06-23 00:00:00.000",
+            "2005-06-28 00:00:00.000",
+            "2005-06-29 00:00:00.000",
+            "2005-07-02 00:00:00.000",
+            "2005-07-05 00:00:00.000",
+            "2005-07-11 00:00:00.000",
+            "2005-07-14 00:00:00.000",
+            "2005-07-19 00:00:00.000",
+            "2005-07-20 00:00:00.000",
+            "2005-07-27 00:00:00.000",
+            "2005-07-31 00:00:00.000",
+            "2005-08-07 00:00:00.000",
+            "2005-08-08 00:00:00.000",
+            "2005-08-10 00:00:00.000",
+            "2005-08-18 00:00:00.000",
+            "2005-08-20 00:00:00.000",
+            "2005-08-21 00:00:00.000",
+            "2005-08-22 00:00:00.000",
+            "2005-08-24 00:00:00.000",
+            "2005-08-25 00:00:00.000",
+            "2005-08-31 00:00:00.000",
+            "2005-09-02 00:00:00.000",
+            "2005-09-03 00:00:00.000",
+            "2005-09-06 00:00:00.000",
+            "2005-09-08 00:00:00.000",
+            "2005-09-13 00:00:00.000",
+            "2005-09-18 00:00:00.000",
+            "2005-09-19 00:00:00.000",
+            "2005-09-24 00:00:00.000",
+            "2005-09-30 00:00:00.000",
+            "2005-10-03 00:00:00.000",
+            "2005-10-04 00:00:00.000",
+            "2005-10-05 00:00:00.000",
+            "2005-10-07 00:00:00.000",
+            "2005-10-08 00:00:00.000",
+            "2005-10-14 00:00:00.000",
+            "2005-10-23 00:00:00.000",
+            "2005-10-24 00:00:00.000",
+            "2005-10-28 00:00:00.000",
+            "2005-11-04 00:00:00.000",
+            "2005-11-05 00:00:00.000",
+            "2005-11-07 00:00:00.000",
+            "2005-11-14 00:00:00.000",
+            "2005-11-21 00:00:00.000",
+            "2005-11-22 00:00:00.000",
+            "2005-11-24 00:00:00.000",
+            "2005-11-26 00:00:00.000",
+            "2005-11-28 00:00:00.000",
+            "2005-11-30 00:00:00.000",
+            "2005-12-02 00:00:00.000",
+            "2005-12-07 00:00:00.000",
+            "2005-12-10 00:00:00.000",
+            "2005-12-14 00:00:00.000",
+            "2005-12-16 00:00:00.000",
+            "2005-12-19 00:00:00.000",
+            "2005-12-22 00:00:00.000",
+            "2005-12-23 00:00:00.000",
+            "2005-12-26 00:00:00.000",
+            "2005-12-30 00:00:00.000",
+            "2006-01-09 00:00:00.000",
+            "2006-01-15 00:00:00.000",
+            "2006-01-26 00:00:00.000",
+            "2006-02-03 00:00:00.000",
+            "2006-02-08 00:00:00.000",
+            "2006-02-09 00:00:00.000",
+            "2006-02-12 00:00:00.000",
+            "2006-02-13 00:00:00.000",
+            "2006-02-18 00:00:00.000",
+            "2006-02-24 00:00:00.000",
+            "2006-03-06 00:00:00.000",
+            "2006-03-07 00:00:00.000",
+            "2006-03-16 00:00:00.000",
+            "2006-03-23 00:00:00.000",
+            "2006-03-27 00:00:00.000",
+            "2006-03-31 00:00:00.000",
+            "2006-04-05 00:00:00.000",
+            "2006-04-06 00:00:00.000",
+            "2006-04-12 00:00:00.000",
+            "2006-04-17 00:00:00.000",
+            "2006-04-25 00:00:00.000",
+            "2006-05-02 00:00:00.000",
+            "2006-05-03 00:00:00.000",
+            "2006-05-05 00:00:00.000",
+            "2006-05-13 00:00:00.000",
+            "2006-05-15 00:00:00.000",
+            "2006-05-16 00:00:00.000",
+            "2006-05-18 00:00:00.000",
+            "2006-05-20 00:00:00.000",
+            "2006-05-21 00:00:00.000",
+            "2006-05-26 00:00:00.000",
+            "2006-06-01 00:00:00.000",
+            "2006-06-04 00:00:00.000",
+            "2006-06-05 00:00:00.000",
+            "2006-06-06 00:00:00.000",
+            "2006-06-07 00:00:00.000",
+            "2006-06-09 00:00:00.000",
+            "2006-06-12 00:00:00.000",
+            "2006-06-13 00:00:00.000",
+            "2006-06-14 00:00:00.000",
+            "2006-06-17 00:00:00.000",
+            "2006-06-19 00:00:00.000",
+            "2006-07-02 00:00:00.000",
+            "2006-07-04 00:00:00.000",
+            "2006-07-05 00:00:00.000",
+            "2006-07-06 00:00:00.000",
+            "2006-07-20 00:00:00.000",
+            "2006-08-03 00:00:00.000",
+            "2006-08-08 00:00:00.000",
+            "2006-08-10 00:00:00.000",
+            "2006-08-11 00:00:00.000",
+            "2006-08-12 00:00:00.000",
+            "2006-08-16 00:00:00.000",
+            "2006-08-27 00:00:00.000",
+            "2006-09-01 00:00:00.000",
+            "2006-09-02 00:00:00.000",
+            "2006-09-03 00:00:00.000",
+            "2006-09-07 00:00:00.000",
+            "2006-09-10 00:00:00.000",
+            "2006-09-13 00:00:00.000",
+            "2006-09-15 00:00:00.000",
+            "2006-09-22 00:00:00.000",
+            "2006-09-23 00:00:00.000",
+            "2006-10-01 00:00:00.000",
+            "2006-10-04 00:00:00.000",
+            "2006-10-06 00:00:00.000",
+            "2006-10-12 00:00:00.000",
+            "2006-10-14 00:00:00.000",
+            "2006-10-15 00:00:00.000",
+            "2006-10-16 00:00:00.000",
+            "2006-10-17 00:00:00.000",
+            "2006-10-20 00:00:00.000",
+            "2006-10-22 00:00:00.000",
+            "2006-10-23 00:00:00.000",
+            "2006-10-24 00:00:00.000",
+            "2006-10-31 00:00:00.000",
+            "2006-11-01 00:00:00.000",
+            "2006-11-03 00:00:00.000",
+            "2006-11-06 00:00:00.000",
+            "2006-11-07 00:00:00.000",
+            "2006-11-09 00:00:00.000",
+            "2006-11-12 00:00:00.000",
+            "2006-11-16 00:00:00.000",
+            "2006-11-23 00:00:00.000",
+            "2006-11-25 00:00:00.000",
+            "2006-11-26 00:00:00.000",
+            "2006-11-30 00:00:00.000",
+            "2006-12-02 00:00:00.000",
+            "2006-12-05 00:00:00.000",
+            "2006-12-07 00:00:00.000",
+            "2006-12-10 00:00:00.000",
+            "2006-12-11 00:00:00.000",
+            "2006-12-12 00:00:00.000",
+            "2006-12-14 00:00:00.000",
+            "2006-12-19 00:00:00.000",
+            "2006-12-21 00:00:00.000",
+            "2006-12-30 00:00:00.000",
+            "2007-01-01 00:00:00.000",
+            "2007-01-03 00:00:00.000",
+            "2007-01-04 00:00:00.000",
+            "2007-01-05 00:00:00.000",
+            "2007-01-07 00:00:00.000",
+            "2007-01-08 00:00:00.000",
+            "2007-01-09 00:00:00.000",
+            "2007-01-24 00:00:00.000",
+            "2007-02-04 00:00:00.000",
+            "2007-02-05 00:00:00.000",
+            "2007-02-08 00:00:00.000",
+            "2007-02-10 00:00:00.000",
+            "2007-02-14 00:00:00.000",
+            "2007-02-16 00:00:00.000",
+            "2007-02-24 00:00:00.000",
+            "2007-02-27 00:00:00.000",
+            "2007-03-02 00:00:00.000",
+            "2007-03-08 00:00:00.000",
+            "2007-03-09 00:00:00.000",
+            "2007-03-10 00:00:00.000",
+            "2007-03-13 00:00:00.000",
+            "2007-03-15 00:00:00.000",
+            "2007-03-16 00:00:00.000",
+            "2007-03-22 00:00:00.000",
+            "2007-03-23 00:00:00.000",
+            "2007-03-26 00:00:00.000",
+            "2007-03-28 00:00:00.000",
+            "2007-03-31 00:00:00.000",
+            "2007-04-03 00:00:00.000",
+            "2007-04-04 00:00:00.000",
+            "2007-04-05 00:00:00.000",
+            "2007-04-06 00:00:00.000",
+            "2007-04-13 00:00:00.000",
+            "2007-04-15 00:00:00.000",
+            "2007-04-17 00:00:00.000",
+            "2007-04-18 00:00:00.000",
+            "2007-04-25 00:00:00.000",
+            "2007-04-26 00:00:00.000",
+            "2007-04-27 00:00:00.000",
+            "2007-04-29 00:00:00.000",
+            "2007-05-02 00:00:00.000",
+            "2007-05-08 00:00:00.000",
+            "2007-05-11 00:00:00.000",
+            "2007-05-12 00:00:00.000",
+            "2007-05-17 00:00:00.000",
+            "2007-05-18 00:00:00.000",
+            "2007-05-19 00:00:00.000",
+            "2007-05-22 00:00:00.000",
+            "2007-05-26 00:00:00.000",
+            "2007-05-27 00:00:00.000",
+            "2007-06-01 00:00:00.000",
+            "2007-06-04 00:00:00.000",
+            "2007-06-05 00:00:00.000",
+            "2007-06-07 00:00:00.000",
+            "2007-06-12 00:00:00.000",
+            "2007-06-15 00:00:00.000",
+            "2007-06-16 00:00:00.000",
+            "2007-06-19 00:00:00.000",
+            "2007-06-21 00:00:00.000",
+            "2007-06-24 00:00:00.000",
+            "2007-07-01 00:00:00.000",
+            "2007-07-02 00:00:00.000",
+            "2007-07-06 00:00:00.000",
+            "2007-07-14 00:00:00.000",
+            "2007-07-19 00:00:00.000",
+            "2007-07-22 00:00:00.000",
+            "2007-07-29 00:00:00.000",
+            "2007-07-31 00:00:00.000",
+            "2007-08-02 00:00:00.000",
+            "2007-08-03 00:00:00.000",
+            "2007-08-06 00:00:00.000",
+            "2007-08-08 00:00:00.000",
+            "2007-08-18 00:00:00.000",
+            "2007-08-20 00:00:00.000",
+            "2007-08-22 00:00:00.000",
+            "2007-08-23 00:00:00.000",
+            "2007-08-24 00:00:00.000",
+            "2007-08-25 00:00:00.000",
+            "2007-08-29 00:00:00.000",
+            "2007-09-01 00:00:00.000",
+            "2007-09-02 00:00:00.000",
+            "2007-09-03 00:00:00.000",
+            "2007-09-04 00:00:00.000",
+            "2007-09-07 00:00:00.000",
+            "2007-09-10 00:00:00.000",
+            "2007-09-12 00:00:00.000",
+            "2007-09-20 00:00:00.000",
+            "2007-09-21 00:00:00.000",
+            "2007-09-24 00:00:00.000",
+            "2007-10-14 00:00:00.000",
+            "2007-10-31 00:00:00.000"});
+            this.comboBoxFechaComparar.Location = new System.Drawing.Point(551, 296);
+            this.comboBoxFechaComparar.Name = "comboBoxFechaComparar";
+            this.comboBoxFechaComparar.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxFechaComparar.TabIndex = 39;
+            // 
+            // lblFechaComparar1
+            // 
+            this.lblFechaComparar1.AutoSize = true;
+            this.lblFechaComparar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaComparar1.Location = new System.Drawing.Point(742, 268);
+            this.lblFechaComparar1.Name = "lblFechaComparar1";
+            this.lblFechaComparar1.Size = new System.Drawing.Size(46, 16);
+            this.lblFechaComparar1.TabIndex = 40;
+            this.lblFechaComparar1.Text = "Fecha";
+            // 
+            // comboBoxFechaComparar1
+            // 
+            this.comboBoxFechaComparar1.FormattingEnabled = true;
+            this.comboBoxFechaComparar1.Items.AddRange(new object[] {
+            "2004-10-10 00:00:00.000",
+            "2004-11-15 00:00:00.000",
+            "2004-12-12 00:00:00.000",
+            "2005-01-22 00:00:00.000",
+            "2005-01-25 00:00:00.000",
+            "2005-01-26 00:00:00.000",
+            "2005-01-27 00:00:00.000",
+            "2005-01-29 00:00:00.000",
+            "2005-02-01 00:00:00.000",
+            "2005-02-22 00:00:00.000",
+            "2005-02-24 00:00:00.000",
+            "2005-02-25 00:00:00.000",
+            "2005-03-02 00:00:00.000",
+            "2005-03-10 00:00:00.000",
+            "2005-03-19 00:00:00.000",
+            "2005-03-24 00:00:00.000",
+            "2005-03-26 00:00:00.000",
+            "2005-04-05 00:00:00.000",
+            "2005-04-08 00:00:00.000",
+            "2005-04-13 00:00:00.000",
+            "2005-04-16 00:00:00.000",
+            "2005-04-26 00:00:00.000",
+            "2005-04-27 00:00:00.000",
+            "2005-04-28 00:00:00.000",
+            "2005-05-01 00:00:00.000",
+            "2005-05-02 00:00:00.000",
+            "2005-05-06 00:00:00.000",
+            "2005-05-08 00:00:00.000",
+            "2005-05-14 00:00:00.000",
+            "2005-05-18 00:00:00.000",
+            "2005-05-22 00:00:00.000",
+            "2005-06-02 00:00:00.000",
+            "2005-06-10 00:00:00.000",
+            "2005-06-11 00:00:00.000",
+            "2005-06-13 00:00:00.000",
+            "2005-06-23 00:00:00.000",
+            "2005-06-28 00:00:00.000",
+            "2005-06-29 00:00:00.000",
+            "2005-07-02 00:00:00.000",
+            "2005-07-05 00:00:00.000",
+            "2005-07-11 00:00:00.000",
+            "2005-07-14 00:00:00.000",
+            "2005-07-19 00:00:00.000",
+            "2005-07-20 00:00:00.000",
+            "2005-07-27 00:00:00.000",
+            "2005-07-31 00:00:00.000",
+            "2005-08-07 00:00:00.000",
+            "2005-08-08 00:00:00.000",
+            "2005-08-10 00:00:00.000",
+            "2005-08-18 00:00:00.000",
+            "2005-08-20 00:00:00.000",
+            "2005-08-21 00:00:00.000",
+            "2005-08-22 00:00:00.000",
+            "2005-08-24 00:00:00.000",
+            "2005-08-25 00:00:00.000",
+            "2005-08-31 00:00:00.000",
+            "2005-09-02 00:00:00.000",
+            "2005-09-03 00:00:00.000",
+            "2005-09-06 00:00:00.000",
+            "2005-09-08 00:00:00.000",
+            "2005-09-13 00:00:00.000",
+            "2005-09-18 00:00:00.000",
+            "2005-09-19 00:00:00.000",
+            "2005-09-24 00:00:00.000",
+            "2005-09-30 00:00:00.000",
+            "2005-10-03 00:00:00.000",
+            "2005-10-04 00:00:00.000",
+            "2005-10-05 00:00:00.000",
+            "2005-10-07 00:00:00.000",
+            "2005-10-08 00:00:00.000",
+            "2005-10-14 00:00:00.000",
+            "2005-10-23 00:00:00.000",
+            "2005-10-24 00:00:00.000",
+            "2005-10-28 00:00:00.000",
+            "2005-11-04 00:00:00.000",
+            "2005-11-05 00:00:00.000",
+            "2005-11-07 00:00:00.000",
+            "2005-11-14 00:00:00.000",
+            "2005-11-21 00:00:00.000",
+            "2005-11-22 00:00:00.000",
+            "2005-11-24 00:00:00.000",
+            "2005-11-26 00:00:00.000",
+            "2005-11-28 00:00:00.000",
+            "2005-11-30 00:00:00.000",
+            "2005-12-02 00:00:00.000",
+            "2005-12-07 00:00:00.000",
+            "2005-12-10 00:00:00.000",
+            "2005-12-14 00:00:00.000",
+            "2005-12-16 00:00:00.000",
+            "2005-12-19 00:00:00.000",
+            "2005-12-22 00:00:00.000",
+            "2005-12-23 00:00:00.000",
+            "2005-12-26 00:00:00.000",
+            "2005-12-30 00:00:00.000",
+            "2006-01-09 00:00:00.000",
+            "2006-01-15 00:00:00.000",
+            "2006-01-26 00:00:00.000",
+            "2006-02-03 00:00:00.000",
+            "2006-02-08 00:00:00.000",
+            "2006-02-09 00:00:00.000",
+            "2006-02-12 00:00:00.000",
+            "2006-02-13 00:00:00.000",
+            "2006-02-18 00:00:00.000",
+            "2006-02-24 00:00:00.000",
+            "2006-03-06 00:00:00.000",
+            "2006-03-07 00:00:00.000",
+            "2006-03-16 00:00:00.000",
+            "2006-03-23 00:00:00.000",
+            "2006-03-27 00:00:00.000",
+            "2006-03-31 00:00:00.000",
+            "2006-04-05 00:00:00.000",
+            "2006-04-06 00:00:00.000",
+            "2006-04-12 00:00:00.000",
+            "2006-04-17 00:00:00.000",
+            "2006-04-25 00:00:00.000",
+            "2006-05-02 00:00:00.000",
+            "2006-05-03 00:00:00.000",
+            "2006-05-05 00:00:00.000",
+            "2006-05-13 00:00:00.000",
+            "2006-05-15 00:00:00.000",
+            "2006-05-16 00:00:00.000",
+            "2006-05-18 00:00:00.000",
+            "2006-05-20 00:00:00.000",
+            "2006-05-21 00:00:00.000",
+            "2006-05-26 00:00:00.000",
+            "2006-06-01 00:00:00.000",
+            "2006-06-04 00:00:00.000",
+            "2006-06-05 00:00:00.000",
+            "2006-06-06 00:00:00.000",
+            "2006-06-07 00:00:00.000",
+            "2006-06-09 00:00:00.000",
+            "2006-06-12 00:00:00.000",
+            "2006-06-13 00:00:00.000",
+            "2006-06-14 00:00:00.000",
+            "2006-06-17 00:00:00.000",
+            "2006-06-19 00:00:00.000",
+            "2006-07-02 00:00:00.000",
+            "2006-07-04 00:00:00.000",
+            "2006-07-05 00:00:00.000",
+            "2006-07-06 00:00:00.000",
+            "2006-07-20 00:00:00.000",
+            "2006-08-03 00:00:00.000",
+            "2006-08-08 00:00:00.000",
+            "2006-08-10 00:00:00.000",
+            "2006-08-11 00:00:00.000",
+            "2006-08-12 00:00:00.000",
+            "2006-08-16 00:00:00.000",
+            "2006-08-27 00:00:00.000",
+            "2006-09-01 00:00:00.000",
+            "2006-09-02 00:00:00.000",
+            "2006-09-03 00:00:00.000",
+            "2006-09-07 00:00:00.000",
+            "2006-09-10 00:00:00.000",
+            "2006-09-13 00:00:00.000",
+            "2006-09-15 00:00:00.000",
+            "2006-09-22 00:00:00.000",
+            "2006-09-23 00:00:00.000",
+            "2006-10-01 00:00:00.000",
+            "2006-10-04 00:00:00.000",
+            "2006-10-06 00:00:00.000",
+            "2006-10-12 00:00:00.000",
+            "2006-10-14 00:00:00.000",
+            "2006-10-15 00:00:00.000",
+            "2006-10-16 00:00:00.000",
+            "2006-10-17 00:00:00.000",
+            "2006-10-20 00:00:00.000",
+            "2006-10-22 00:00:00.000",
+            "2006-10-23 00:00:00.000",
+            "2006-10-24 00:00:00.000",
+            "2006-10-31 00:00:00.000",
+            "2006-11-01 00:00:00.000",
+            "2006-11-03 00:00:00.000",
+            "2006-11-06 00:00:00.000",
+            "2006-11-07 00:00:00.000",
+            "2006-11-09 00:00:00.000",
+            "2006-11-12 00:00:00.000",
+            "2006-11-16 00:00:00.000",
+            "2006-11-23 00:00:00.000",
+            "2006-11-25 00:00:00.000",
+            "2006-11-26 00:00:00.000",
+            "2006-11-30 00:00:00.000",
+            "2006-12-02 00:00:00.000",
+            "2006-12-05 00:00:00.000",
+            "2006-12-07 00:00:00.000",
+            "2006-12-10 00:00:00.000",
+            "2006-12-11 00:00:00.000",
+            "2006-12-12 00:00:00.000",
+            "2006-12-14 00:00:00.000",
+            "2006-12-19 00:00:00.000",
+            "2006-12-21 00:00:00.000",
+            "2006-12-30 00:00:00.000",
+            "2007-01-01 00:00:00.000",
+            "2007-01-03 00:00:00.000",
+            "2007-01-04 00:00:00.000",
+            "2007-01-05 00:00:00.000",
+            "2007-01-07 00:00:00.000",
+            "2007-01-08 00:00:00.000",
+            "2007-01-09 00:00:00.000",
+            "2007-01-24 00:00:00.000",
+            "2007-02-04 00:00:00.000",
+            "2007-02-05 00:00:00.000",
+            "2007-02-08 00:00:00.000",
+            "2007-02-10 00:00:00.000",
+            "2007-02-14 00:00:00.000",
+            "2007-02-16 00:00:00.000",
+            "2007-02-24 00:00:00.000",
+            "2007-02-27 00:00:00.000",
+            "2007-03-02 00:00:00.000",
+            "2007-03-08 00:00:00.000",
+            "2007-03-09 00:00:00.000",
+            "2007-03-10 00:00:00.000",
+            "2007-03-13 00:00:00.000",
+            "2007-03-15 00:00:00.000",
+            "2007-03-16 00:00:00.000",
+            "2007-03-22 00:00:00.000",
+            "2007-03-23 00:00:00.000",
+            "2007-03-26 00:00:00.000",
+            "2007-03-28 00:00:00.000",
+            "2007-03-31 00:00:00.000",
+            "2007-04-03 00:00:00.000",
+            "2007-04-04 00:00:00.000",
+            "2007-04-05 00:00:00.000",
+            "2007-04-06 00:00:00.000",
+            "2007-04-13 00:00:00.000",
+            "2007-04-15 00:00:00.000",
+            "2007-04-17 00:00:00.000",
+            "2007-04-18 00:00:00.000",
+            "2007-04-25 00:00:00.000",
+            "2007-04-26 00:00:00.000",
+            "2007-04-27 00:00:00.000",
+            "2007-04-29 00:00:00.000",
+            "2007-05-02 00:00:00.000",
+            "2007-05-08 00:00:00.000",
+            "2007-05-11 00:00:00.000",
+            "2007-05-12 00:00:00.000",
+            "2007-05-17 00:00:00.000",
+            "2007-05-18 00:00:00.000",
+            "2007-05-19 00:00:00.000",
+            "2007-05-22 00:00:00.000",
+            "2007-05-26 00:00:00.000",
+            "2007-05-27 00:00:00.000",
+            "2007-06-01 00:00:00.000",
+            "2007-06-04 00:00:00.000",
+            "2007-06-05 00:00:00.000",
+            "2007-06-07 00:00:00.000",
+            "2007-06-12 00:00:00.000",
+            "2007-06-15 00:00:00.000",
+            "2007-06-16 00:00:00.000",
+            "2007-06-19 00:00:00.000",
+            "2007-06-21 00:00:00.000",
+            "2007-06-24 00:00:00.000",
+            "2007-07-01 00:00:00.000",
+            "2007-07-02 00:00:00.000",
+            "2007-07-06 00:00:00.000",
+            "2007-07-14 00:00:00.000",
+            "2007-07-19 00:00:00.000",
+            "2007-07-22 00:00:00.000",
+            "2007-07-29 00:00:00.000",
+            "2007-07-31 00:00:00.000",
+            "2007-08-02 00:00:00.000",
+            "2007-08-03 00:00:00.000",
+            "2007-08-06 00:00:00.000",
+            "2007-08-08 00:00:00.000",
+            "2007-08-18 00:00:00.000",
+            "2007-08-20 00:00:00.000",
+            "2007-08-22 00:00:00.000",
+            "2007-08-23 00:00:00.000",
+            "2007-08-24 00:00:00.000",
+            "2007-08-25 00:00:00.000",
+            "2007-08-29 00:00:00.000",
+            "2007-09-01 00:00:00.000",
+            "2007-09-02 00:00:00.000",
+            "2007-09-03 00:00:00.000",
+            "2007-09-04 00:00:00.000",
+            "2007-09-07 00:00:00.000",
+            "2007-09-10 00:00:00.000",
+            "2007-09-12 00:00:00.000",
+            "2007-09-20 00:00:00.000",
+            "2007-09-21 00:00:00.000",
+            "2007-09-24 00:00:00.000",
+            "2007-10-14 00:00:00.000",
+            "2007-10-31 00:00:00.000"});
+            this.comboBoxFechaComparar1.Location = new System.Drawing.Point(704, 296);
+            this.comboBoxFechaComparar1.Name = "comboBoxFechaComparar1";
+            this.comboBoxFechaComparar1.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxFechaComparar1.TabIndex = 41;
+            // 
+            // listViewFacturas
+            // 
+            this.listViewFacturas.HideSelection = false;
+            this.listViewFacturas.Location = new System.Drawing.Point(433, 329);
+            this.listViewFacturas.Name = "listViewFacturas";
+            this.listViewFacturas.Size = new System.Drawing.Size(355, 186);
+            this.listViewFacturas.TabIndex = 42;
+            this.listViewFacturas.UseCompatibleStateImageBehavior = false;
+            // 
+            // buttonMetadatosFactura
+            // 
+            this.buttonMetadatosFactura.Location = new System.Drawing.Point(12, 475);
+            this.buttonMetadatosFactura.Name = "buttonMetadatosFactura";
+            this.buttonMetadatosFactura.Size = new System.Drawing.Size(132, 23);
+            this.buttonMetadatosFactura.TabIndex = 43;
+            this.buttonMetadatosFactura.Text = "Metadatos Factura";
+            this.buttonMetadatosFactura.UseVisualStyleBackColor = true;
+            this.buttonMetadatosFactura.Click += new System.EventHandler(this.buttonMetadatosFactura_Click);
+            // 
+            // buttonMsgBox25Clientes
+            // 
+            this.buttonMsgBox25Clientes.Location = new System.Drawing.Point(187, 475);
+            this.buttonMsgBox25Clientes.Name = "buttonMsgBox25Clientes";
+            this.buttonMsgBox25Clientes.Size = new System.Drawing.Size(132, 23);
+            this.buttonMsgBox25Clientes.TabIndex = 44;
+            this.buttonMsgBox25Clientes.Text = "MsgBox 25-25 Clientes";
+            this.buttonMsgBox25Clientes.UseVisualStyleBackColor = true;
+            this.buttonMsgBox25Clientes.Click += new System.EventHandler(this.buttonMsgBox25Clientes_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 471);
-            this.Controls.Add(this.labelGenero);
+            this.ClientSize = new System.Drawing.Size(898, 527);
+            this.Controls.Add(this.buttonMsgBox25Clientes);
+            this.Controls.Add(this.buttonMetadatosFactura);
+            this.Controls.Add(this.listViewFacturas);
+            this.Controls.Add(this.comboBoxFechaComparar1);
+            this.Controls.Add(this.lblFechaComparar1);
+            this.Controls.Add(this.comboBoxFechaComparar);
+            this.Controls.Add(this.buttonListView1);
+            this.Controls.Add(this.lblFechaComparar);
+            this.Controls.Add(this.lblListview1);
+            this.Controls.Add(this.lblGenero);
             this.Controls.Add(this.comboBoxGenero);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listViewPeliculas);
             this.Controls.Add(this.lblListview);
             this.Controls.Add(this.buttonListView);
             this.Controls.Add(this.textBoxResultadoDelete);
@@ -522,8 +1191,17 @@ namespace DI_RetoCS
         private System.Windows.Forms.TextBox textBoxResultadoDelete;
         private System.Windows.Forms.Button buttonListView;
         private System.Windows.Forms.Label lblListview;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listViewPeliculas;
         private System.Windows.Forms.ComboBox comboBoxGenero;
-        private System.Windows.Forms.Label labelGenero;
+        private System.Windows.Forms.Label lblGenero;
+        private System.Windows.Forms.Label lblListview1;
+        private System.Windows.Forms.Label lblFechaComparar;
+        private System.Windows.Forms.Button buttonListView1;
+        private System.Windows.Forms.ComboBox comboBoxFechaComparar;
+        private System.Windows.Forms.Label lblFechaComparar1;
+        private System.Windows.Forms.ComboBox comboBoxFechaComparar1;
+        private System.Windows.Forms.ListView listViewFacturas;
+        private System.Windows.Forms.Button buttonMetadatosFactura;
+        private System.Windows.Forms.Button buttonMsgBox25Clientes;
     }
 }
