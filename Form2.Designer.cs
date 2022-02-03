@@ -42,6 +42,14 @@ namespace DI_RetoCS
             this.buttonQuitarUltimo = new System.Windows.Forms.Button();
             this.Label1 = new System.Windows.Forms.Label();
             this.buttonBorrarDataSet = new System.Windows.Forms.Button();
+            this.buttonBorrarClavePrimaria = new System.Windows.Forms.Button();
+            this.txtBorrar = new System.Windows.Forms.TextBox();
+            this.txtFila = new System.Windows.Forms.TextBox();
+            this.txtFila1 = new System.Windows.Forms.TextBox();
+            this.txtIrFila = new System.Windows.Forms.TextBox();
+            this.buttonIrFila = new System.Windows.Forms.Button();
+            this.buttonBuscar = new System.Windows.Forms.Button();
+            this.ComboBoxCodCli = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,6 +80,7 @@ namespace DI_RetoCS
             this.DataGridView1.Name = "DataGridView1";
             this.DataGridView1.Size = new System.Drawing.Size(772, 168);
             this.DataGridView1.TabIndex = 2;
+            this.DataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
             // lblFacturas
             // 
@@ -172,11 +181,94 @@ namespace DI_RetoCS
             this.buttonBorrarDataSet.UseVisualStyleBackColor = true;
             this.buttonBorrarDataSet.Click += new System.EventHandler(this.buttonBorrarDataSet_Click);
             // 
+            // buttonBorrarClavePrimaria
+            // 
+            this.buttonBorrarClavePrimaria.Location = new System.Drawing.Point(502, 256);
+            this.buttonBorrarClavePrimaria.Name = "buttonBorrarClavePrimaria";
+            this.buttonBorrarClavePrimaria.Size = new System.Drawing.Size(80, 36);
+            this.buttonBorrarClavePrimaria.TabIndex = 34;
+            this.buttonBorrarClavePrimaria.Text = "Borrar CLAVE PRIMARIA";
+            this.buttonBorrarClavePrimaria.UseVisualStyleBackColor = true;
+            this.buttonBorrarClavePrimaria.Click += new System.EventHandler(this.buttonBorrarClavePrimaria_Click);
+            // 
+            // txtBorrar
+            // 
+            this.txtBorrar.Location = new System.Drawing.Point(588, 265);
+            this.txtBorrar.Name = "txtBorrar";
+            this.txtBorrar.Size = new System.Drawing.Size(100, 20);
+            this.txtBorrar.TabIndex = 35;
+            // 
+            // txtFila
+            // 
+            this.txtFila.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFila.Location = new System.Drawing.Point(16, 311);
+            this.txtFila.Name = "txtFila";
+            this.txtFila.Size = new System.Drawing.Size(228, 26);
+            this.txtFila.TabIndex = 36;
+            // 
+            // txtFila1
+            // 
+            this.txtFila1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFila1.Location = new System.Drawing.Point(16, 343);
+            this.txtFila1.Name = "txtFila1";
+            this.txtFila1.Size = new System.Drawing.Size(228, 26);
+            this.txtFila1.TabIndex = 37;
+            // 
+            // txtIrFila
+            // 
+            this.txtIrFila.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIrFila.Location = new System.Drawing.Point(391, 320);
+            this.txtIrFila.Name = "txtIrFila";
+            this.txtIrFila.Size = new System.Drawing.Size(52, 26);
+            this.txtIrFila.TabIndex = 39;
+            // 
+            // buttonIrFila
+            // 
+            this.buttonIrFila.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonIrFila.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.buttonIrFila.Location = new System.Drawing.Point(285, 311);
+            this.buttonIrFila.Name = "buttonIrFila";
+            this.buttonIrFila.Size = new System.Drawing.Size(100, 43);
+            this.buttonIrFila.TabIndex = 38;
+            this.buttonIrFila.Text = "Ir a la fila:";
+            this.buttonIrFila.UseVisualStyleBackColor = true;
+            this.buttonIrFila.Click += new System.EventHandler(this.buttonIrFila_Click);
+            // 
+            // buttonBuscar
+            // 
+            this.buttonBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.buttonBuscar.Location = new System.Drawing.Point(502, 311);
+            this.buttonBuscar.Name = "buttonBuscar";
+            this.buttonBuscar.Size = new System.Drawing.Size(100, 43);
+            this.buttonBuscar.TabIndex = 40;
+            this.buttonBuscar.Text = "Buscar";
+            this.buttonBuscar.UseVisualStyleBackColor = true;
+            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
+            // 
+            // ComboBoxCodCli
+            // 
+            this.ComboBoxCodCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ComboBoxCodCli.FormattingEnabled = true;
+            this.ComboBoxCodCli.Location = new System.Drawing.Point(502, 396);
+            this.ComboBoxCodCli.Name = "ComboBoxCodCli";
+            this.ComboBoxCodCli.Size = new System.Drawing.Size(151, 32);
+            this.ComboBoxCodCli.TabIndex = 41;
+            this.ComboBoxCodCli.SelectedIndexChanged += new System.EventHandler(this.ComboBoxCodCli_SelectedIndexChanged);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ComboBoxCodCli);
+            this.Controls.Add(this.buttonBuscar);
+            this.Controls.Add(this.txtIrFila);
+            this.Controls.Add(this.buttonIrFila);
+            this.Controls.Add(this.txtFila1);
+            this.Controls.Add(this.txtFila);
+            this.Controls.Add(this.txtBorrar);
+            this.Controls.Add(this.buttonBorrarClavePrimaria);
             this.Controls.Add(this.buttonBorrarDataSet);
             this.Controls.Add(this.Label1);
             this.Controls.Add(this.buttonQuitarUltimo);
@@ -214,5 +306,13 @@ namespace DI_RetoCS
         private System.Windows.Forms.Button buttonQuitarUltimo;
         internal System.Windows.Forms.Label Label1;
         private System.Windows.Forms.Button buttonBorrarDataSet;
+        private System.Windows.Forms.Button buttonBorrarClavePrimaria;
+        private System.Windows.Forms.TextBox txtBorrar;
+        internal System.Windows.Forms.TextBox txtFila;
+        internal System.Windows.Forms.TextBox txtFila1;
+        internal System.Windows.Forms.TextBox txtIrFila;
+        internal System.Windows.Forms.Button buttonIrFila;
+        internal System.Windows.Forms.Button buttonBuscar;
+        internal System.Windows.Forms.ComboBox ComboBoxCodCli;
     }
 }
