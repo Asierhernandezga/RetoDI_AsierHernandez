@@ -21,8 +21,8 @@ namespace DI_RetoCS
         // NO CONECTADO (Tiene DATASET Y SQLDATAADAPTER)
         private string sql;
         private MiConexion Conexion = new MiConexion();
-        private DataSet das1,dasComboBox;
-        private SqlDataAdapter adap1,adapComboBox;
+        private DataSet das1,dasComboBox,das2,das3;
+        private SqlDataAdapter adap1,adapComboBox,adap2,adap3;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -198,7 +198,53 @@ namespace DI_RetoCS
 
         private void ComboBoxCodCli_SelectedIndexChanged(object sender, EventArgs e)
         {
+            das2 = new DataSet();
+            SqlCommand cmd2 = new SqlCommand("Select distinct CodCli from Facturas where CodCli >=" + ComboBoxCodCli.Text + " order by CodCli", Conexion.pConexion);
+            adap2 = new SqlDataAdapter(cmd2);
+            adap2.Fill(das2, "ccc");
+            string acum = null;
+            int num = 0;
 
+            for (int q = 0; q < das2.Tables[0].Rows.Count; q++)
+            {
+                acum += das2.Tables[0].Rows[q][0].ToString() + "- " + calcular(Convert.ToInt32(das2.Tables[0].Rows[q][0])).ToString() + Environment.NewLine;
+                num += 1;
+                if (num == 10)
+                {
+                    break;
+                }
+            }
+
+            MessageBox.Show(acum);
         }
+
+        private double calcular(int a)
+        {
+            das3 = new DataSet();
+            double total = 0;
+            double aa, bb, cc;
+
+            try
+            {
+                SqlCommand cmd3 = new SqlCommand("Select * from Facturas where CodCli=" + a, Conexion.pConexion);
+                adap3 = new SqlDataAdapter(cmd3);
+                adap3.Fill(das3, "bbb");
+                for (int i = 0; i < das3.Tables[0].Rows.Count; i++)
+                {
+                    aa = Convert.ToDouble(das3.Tables[0].Rows[i]["Importe"]);
+                    bb = Convert.ToDouble(das3.Tables[0].Rows[i]["GastoEnvio"]);
+                    cc = Convert.ToDouble(das3.Tables[0].Rows[i]["DTO"]);
+                    // total += aa + bb * (1 - cc
+                    total += aa + bb;
+                }
+                //MessageBox.Show(total.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            return total;
+        }
+
     }
 }
