@@ -23,3 +23,16 @@ C:\Users\Admin\Desktop\RetoDI\RetoDI_AsierHernandez\obj\Debug\DI_RetoCS.csproj.G
 C:\Users\Admin\Desktop\RetoDI\RetoDI_AsierHernandez\obj\Debug\DI_RetoCS.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Desktop\RetoDI\RetoDI_AsierHernandez\obj\Debug\DI_RetoCS.exe
 C:\Users\Admin\Desktop\RetoDI\RetoDI_AsierHernandez\obj\Debug\DI_RetoCS.pdb
+C:\Users\VSPC\Desktop\RetosJorge\RetoDI_AsierHernandez\bin\Debug\DI_RetoCS.exe.config
+C:\Users\VSPC\Desktop\RetosJorge\RetoDI_AsierHernandez\bin\Debug\DI_RetoCS.exe
+C:\Users\VSPC\Desktop\RetosJorge\RetoDI_AsierHernandez\bin\Debug\DI_RetoCS.pdb
+C:\Users\VSPC\Desktop\RetosJorge\RetoDI_AsierHernandez\obj\Debug\DI_RetoCS.csproj.AssemblyReference.cache
+C:\Users\VSPC\Desktop\RetosJorge\RetoDI_AsierHernandez\obj\Debug\DI_RetoCS.Form1.resources
+C:\Users\VSPC\Desktop\RetosJorge\RetoDI_AsierHernandez\obj\Debug\DI_RetoCS.Form2.resources
+C:\Users\VSPC\Desktop\RetosJorge\RetoDI_AsierHernandez\obj\Debug\DI_RetoCS.Form3.resources
+C:\Users\VSPC\Desktop\RetosJorge\RetoDI_AsierHernandez\obj\Debug\DI_RetoCS.Padre.resources
+C:\Users\VSPC\Desktop\RetosJorge\RetoDI_AsierHernandez\obj\Debug\DI_RetoCS.Properties.Resources.resources
+C:\Users\VSPC\Desktop\RetosJorge\RetoDI_AsierHernandez\obj\Debug\DI_RetoCS.csproj.GenerateResource.cache
+C:\Users\VSPC\Desktop\RetosJorge\RetoDI_AsierHernandez\obj\Debug\DI_RetoCS.csproj.CoreCompileInputs.cache
+C:\Users\VSPC\Desktop\RetosJorge\RetoDI_AsierHernandez\obj\Debug\DI_RetoCS.exe
+C:\Users\VSPC\Desktop\RetosJorge\RetoDI_AsierHernandez\obj\Debug\DI_RetoCS.pdb

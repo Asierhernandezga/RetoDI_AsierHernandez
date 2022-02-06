@@ -58,8 +58,9 @@ namespace DI_RetoCS
 
             string ComboText = comboBoxPais.Text;   //Para coger el texto del ComboBox
 
-            sql = "Select count(*) from Peliculas where Pais ='" + ComboText+ "'";
+            sql = "Select count(*) from Peliculas where Pais = @pais";
             SqlCommand cmd = new SqlCommand(sql, Conexion.pConexion);
+            cmd.Parameters.Add("@pais", SqlDbType.Int).Value = comboBoxPais.Text;
             try
             {
                 Conexion.AbrirConexion();
@@ -100,8 +101,19 @@ namespace DI_RetoCS
         {
             //Insertar
             sql = "Insert into Peliculas (CodPelicula,Titulo,Duración,CodGenero,Año,Productora,Pais,Precio,Director) ";
-            sql += "values ('999','Elorrieta','120','1','2022','A','España','2','Yo')";
+            sql += "values (@codPelicula, @titulo, @duracion, @codGenero, @año, @productora, @pais, @precio, @director)";
             SqlCommand cmd = new SqlCommand(sql, Conexion.pConexion);
+
+            cmd.Parameters.Add("@codPelicula", SqlDbType.Int).Value = 999;
+            cmd.Parameters.Add("@titulo", SqlDbType.NVarChar).Value = "Elorrieta";
+            cmd.Parameters.Add("@duracion", SqlDbType.Int).Value = 120;
+            cmd.Parameters.Add("@codGenero", SqlDbType.Int).Value = 1;
+            cmd.Parameters.Add("@año", SqlDbType.Int).Value = 2022;
+            cmd.Parameters.Add("@productora", SqlDbType.NVarChar).Value = "A";
+            cmd.Parameters.Add("@pais", SqlDbType.NVarChar).Value = "ESPAÑA";
+            cmd.Parameters.Add("@precio", SqlDbType.Float).Value = 2;
+            cmd.Parameters.Add("@director", SqlDbType.NVarChar).Value = "YO";
+
             try
             {
                 Conexion.AbrirConexion();
@@ -142,8 +154,9 @@ namespace DI_RetoCS
         {
             //UPDATE
             sql = "update Peliculas set Director='Tu' ";
-            sql += "where Director='Yo'";
+            sql += "where Director=@pelicula";
             SqlCommand cmd = new SqlCommand(sql, Conexion.pConexion);
+            cmd.Parameters.Add("@pelicula", SqlDbType.Int).Value = "Yo";
             try
             {
                 Conexion.AbrirConexion();
@@ -182,8 +195,9 @@ namespace DI_RetoCS
         private void buttonDeleteConParametros_Click(object sender, EventArgs e)
         {
             //Delete
-            sql = "Delete from Peliculas where Director='Tu'";
+            sql = "Delete from Peliculas where Director=@pelicula";
             SqlCommand cmd = new SqlCommand(sql, Conexion.pConexion);
+            cmd.Parameters.Add("@pelicula", SqlDbType.Int).Value = "Tu";
             try
             {
                 Conexion.AbrirConexion();
