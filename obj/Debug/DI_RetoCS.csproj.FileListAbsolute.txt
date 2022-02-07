@@ -96,5 +96,8 @@ C:\Users\Admin\Desktop\RetoDI\RetoDI_AsierHernandez\bin\Debug\pt\Microsoft.Repor
 C:\Users\Admin\Desktop\RetoDI\RetoDI_AsierHernandez\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Admin\Desktop\RetoDI\RetoDI_AsierHernandez\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Admin\Desktop\RetoDI\RetoDI_AsierHernandez\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Admin\Desktop\RetoDI\RetoDI_AsierHernandez\obj\Debug\DI_RetoCS.Form4.resources
 C:\Users\Admin\Desktop\RetoDI\RetoDI_AsierHernandez\obj\Debug\DI_RetoCS.csproj.CopyComplete
+C:\Users\Admin\Desktop\RetoDI\RetoDI_AsierHernandez\obj\Debug\DI_RetoCS.Form5.resources
+C:\Users\Admin\Desktop\RetoDI\RetoDI_AsierHernandez\obj\Debug\DI_RetoCS.Form4.resources
+C:\Users\Admin\Desktop\RetoDI\RetoDI_AsierHernandez\obj\Debug\RdlCompile.cache
+C:\Users\Admin\Desktop\RetoDI\RetoDI_AsierHernandez\obj\Debug\RdlCompile.compiled

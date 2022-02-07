@@ -29,13 +29,21 @@ namespace DI_RetoCS
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.formulariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.form2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.form1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.form4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.form5ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.miLista = new System.Windows.Forms.ToolStripMenuItem();
+            this.DataSet1 = new DI_RetoCS.DataSet1();
+            this.PeliculasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.PeliculasTableAdapter = new DI_RetoCS.DataSet1TableAdapters.PeliculasTableAdapter();
+            this.form1ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PeliculasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -52,9 +60,11 @@ namespace DI_RetoCS
             // formulariosToolStripMenuItem
             // 
             this.formulariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.form1ToolStripMenuItem1,
             this.form2ToolStripMenuItem,
             this.form1ToolStripMenuItem,
-            this.form4ToolStripMenuItem});
+            this.form4ToolStripMenuItem,
+            this.form5ToolStripMenuItem});
             this.formulariosToolStripMenuItem.Name = "formulariosToolStripMenuItem";
             this.formulariosToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
             this.formulariosToolStripMenuItem.Text = "Formularios";
@@ -83,11 +93,42 @@ namespace DI_RetoCS
             this.form4ToolStripMenuItem.Text = "Form4";
             this.form4ToolStripMenuItem.Click += new System.EventHandler(this.form4ToolStripMenuItem_Click);
             // 
+            // form5ToolStripMenuItem
+            // 
+            this.form5ToolStripMenuItem.Name = "form5ToolStripMenuItem";
+            this.form5ToolStripMenuItem.ShortcutKeyDisplayString = "";
+            this.form5ToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5;
+            this.form5ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.form5ToolStripMenuItem.Text = "Form5";
+            this.form5ToolStripMenuItem.Click += new System.EventHandler(this.form5ToolStripMenuItem_Click);
+            // 
             // miLista
             // 
             this.miLista.Name = "miLista";
             this.miLista.Size = new System.Drawing.Size(94, 20);
             this.miLista.Text = "Form Abiertos";
+            // 
+            // DataSet1
+            // 
+            this.DataSet1.DataSetName = "DataSet1";
+            this.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // PeliculasBindingSource
+            // 
+            this.PeliculasBindingSource.DataMember = "Peliculas";
+            this.PeliculasBindingSource.DataSource = this.DataSet1;
+            // 
+            // PeliculasTableAdapter
+            // 
+            this.PeliculasTableAdapter.ClearBeforeFill = true;
+            // 
+            // form1ToolStripMenuItem1
+            // 
+            this.form1ToolStripMenuItem1.Name = "form1ToolStripMenuItem1";
+            this.form1ToolStripMenuItem1.ShortcutKeys = System.Windows.Forms.Keys.F1;
+            this.form1ToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.form1ToolStripMenuItem1.Text = "Form1";
+            this.form1ToolStripMenuItem1.Click += new System.EventHandler(this.form1ToolStripMenuItem1_Click);
             // 
             // Padre
             // 
@@ -101,6 +142,8 @@ namespace DI_RetoCS
             this.Load += new System.EventHandler(this.Padre_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PeliculasBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -114,6 +157,11 @@ namespace DI_RetoCS
         private System.Windows.Forms.ToolStripMenuItem form2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem form1ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem form4ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem form5ToolStripMenuItem;
+        private System.Windows.Forms.BindingSource PeliculasBindingSource;
+        private DataSet1 DataSet1;
+        private DataSet1TableAdapters.PeliculasTableAdapter PeliculasTableAdapter;
+        private System.Windows.Forms.ToolStripMenuItem form1ToolStripMenuItem1;
     }
 }
 
