@@ -55,15 +55,15 @@ namespace DI_RetoCS
 
             try
             {
-                cmd.CommandText = "SELECT Precio FROM Peliculas WHERE CodPelicula = 113";
+                cmd.CommandText = "select Precio from Peliculas where CodPelicula = 113";
                 resultado = Convert.ToDouble(cmd.ExecuteScalar());
                 MessageBox.Show(resultado.ToString(), "inicial");
 
-                cmd.CommandText = "UPDATE Peliculas SET Precio = Precio + 5  WHERE CodPelicula = 113";
+                cmd.CommandText = "update Peliculas set Precio = Precio + 5  where CodPelicula = 113";
                 cmd.ExecuteNonQuery();
 
 
-                cmd.CommandText = "UPDATE Productos SET UnitPrice = UnitPrice + 7.99  WHERE ProductID = 4"; //Va a fallar
+                cmd.CommandText = "update Productos set UnitPrice = UnitPrice + 7.99  where ProductID = 4"; //Va a fallar
                 cmd.ExecuteNonQuery();
 
                 transaccion.Commit();
@@ -75,7 +75,7 @@ namespace DI_RetoCS
 
                 MessageBox.Show("Se ha producido un error");    //Si ocurre un error
 
-                cmd.CommandText = "SELECT Precio FROM Peliculas WHERE CodPelicula = 113";
+                cmd.CommandText = "select Precio from Peliculas where CodPelicula = 113";
                 resultado = Convert.ToDouble(cmd.ExecuteScalar());
 
                 MessageBox.Show(resultado.ToString(), "Es igual?");
