@@ -127,7 +127,7 @@ namespace DI_RetoCS
             // 
             // buttonEliminar
             // 
-            this.buttonEliminar.Location = new System.Drawing.Point(528, 136);
+            this.buttonEliminar.Location = new System.Drawing.Point(483, 89);
             this.buttonEliminar.Name = "buttonEliminar";
             this.buttonEliminar.Size = new System.Drawing.Size(75, 23);
             this.buttonEliminar.TabIndex = 28;

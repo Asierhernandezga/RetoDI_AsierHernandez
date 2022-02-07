@@ -20,6 +20,7 @@ namespace DI_RetoCS
         // Para que lo veamos en los demas formularios
         private Form2 f2 = new Form2();
         private Form3 f3 = new Form3();
+        private Form4 f4 = new Form4();
         private void Padre_Load(object sender, EventArgs e)
         {
             this.IsMdiContainer = true;
@@ -27,9 +28,11 @@ namespace DI_RetoCS
             f1.MdiParent = this;
             f2.MdiParent = this;
             f3.MdiParent = this;
+            f4.MdiParent = this;
             f1.WindowState = FormWindowState.Maximized;
             f2.WindowState = FormWindowState.Maximized;
             f3.WindowState = FormWindowState.Maximized;
+            f4.WindowState = FormWindowState.Maximized;
             f1.Show();
             f1.Activate();
         }
@@ -44,6 +47,12 @@ namespace DI_RetoCS
         {
             f3.Show();
             f3.Activate();
+        }
+
+        private void form4ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            f4.Show();
+            f4.Activate();
         }
     }
 }
